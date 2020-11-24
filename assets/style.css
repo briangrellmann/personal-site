@@ -1,0 +1,234 @@
+/*
+ * Brian Grellman
+ *
+ * Table of content
+ *
+ *
+ * 1) Modern CSS Reset rules - Andy Bell - https://hankchizljaw.com/wrote/a-modern-css-reset/
+ * 2) Root - set the colours
+ * 3)
+ *
+ */
+
+/* 1) Modern CSS Reset rules */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 2) Root - set the colours */
+
+:root {
+ --color-background: hsla(43, 23%, 94%, 1);
+ --color-text: hsla(0, 0, 0, 1);
+ --color-link: hsla(166, 40%, 17%, 1);
+ --font-Rubik:'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-Rubik);
+    margin: 0 auto;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--color-link);
+}
+
+a:hover,
+h2 a:link {
+    text-decoration: underline;
+}
+
+[href="#main"] {
+    border: 2px dotted var(--color-text);
+    position: absolute;
+top: -2em;
+right: 0.7rem;
+}
+
+@media (max-width:26.563rem) {
+ body {
+  max-width:30ch
+ }
+}
+
+@media (min-width:26.564rem) and (max-width:47.9rem) {
+ body {
+  max-width:45ch
+ }
+}
+
+@media (min-width:48rem) {
+ body {
+  max-width:80ch
+ }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+ display: block;
+ font-weight: 200;
+ line-height: 2rem;
+ padding: 0.5rem 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h2 {
+ font-size: 1.5rem;
+}
+
+h3 {
+ font-size: 1.2rem
+}
+
+h4 {
+ font-size: 1.2rem
+}
+
+h5 {
+ font-size:1rem
+}
+
+nav {
+    font-size: 1.125rem;
+}
+
+nav ul {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a.highlighted {
+    text-decoration: underline;
+}
+
+ul.links {
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.links li {
+    margin-bottom: 1rem;
+}
+
+ul.links li p {
+    margin: 0;
+}
+
+.block {
+    margin: 2rem 0 3rem;
+}
+
+.block h2 {
+    font-weight: bold;
+}
+
+.block time {
+    display: block;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: normal;
+    margin: 1rem 0
+}
+
+blockquote {
+ border-left:5px solid;
+ padding:0 0 0 1rem
+}
+
+footer p {
+    font-size: 0.875rem;
+}
